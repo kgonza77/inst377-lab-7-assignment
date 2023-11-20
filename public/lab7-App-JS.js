@@ -1,7 +1,5 @@
 async function getCustomers(){
-    var host = window.location.origin;
-    console.log('Host:', host)
-    var test = await fetch(`${host}/customers`, {
+    var test = await fetch(`http://localhost:3000/customers`, {
         method: 'GET',
         headers: {
             "Content-Type": "application/json"
@@ -86,10 +84,8 @@ async function getCustomers(){
 }
 
 async function addCustomer(){
-    
     console.log('Creating Customer')
-    var host = window.location.origin;
-    var test = await fetch(`${host}/customers`, {
+    var test = await fetch(`http://localhost:3000/add-customer`, {
         method: 'POST',
         body: JSON.stringify({
             "firstName": `${document.getElementById('firstName').value}`,
