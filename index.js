@@ -16,7 +16,7 @@ const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
 
 app.get('/', (req, res) => {
     //Here the name for the static files HTML
-    res.sendFile('public/lab7-App-PPt.html', {root: __dirname});
+    res.sendFile('public/lab7-App-PPT.html', {root: __dirname});
 });
 
 app.get('/customers', async (req, res) => {
